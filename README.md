@@ -45,7 +45,7 @@ The SA ID will appear as the `sald` parameter in the request URL.
 
 1. In Home Assistant, go to **HACS → Integrations**
 2. Click the three-dot menu in the top right → **Custom repositories**
-3. Enter `https://github.com/PHTAF/spire-gas-hacs` as the repository URL
+3. Enter `https://github.com/PHTAF/spire-gas-ha` as the repository URL
 4. Select **Integration** as the category
 5. Click **Add**
 6. Search for **Spire Gas** and click **Download**
@@ -87,7 +87,7 @@ history reimports cleanly rather than being skipped.
 ## Contributing
 
 Issues and pull requests welcome at
-[github.com/PHTAF/spire-gas-hacs](https://github.com/PHTAF/spire-gas-hacs).
+[github.com/PHTAF/spire-gas-ha](https://github.com/PHTAF/spire-gas-ha).
 
 ## License
 
