@@ -15,11 +15,6 @@ A custom Home Assistant integration that fetches daily gas usage from
 
 ## Important: Data Availability
 
-Spire typically publishes usage data **one month behind**. This means the
-Energy dashboard will show your most recently completed month, not your
-current usage. This is a limitation of how Spire makes data available and
-is not something this integration can work around.
-
 The amount of historical data available will vary by account. This integration
 imports whatever Spire provides — gaps or missing periods in the data reflect
 what is available from Spire, not a bug in the integration.
