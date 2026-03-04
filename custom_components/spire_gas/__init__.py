@@ -1,4 +1,4 @@
-"""Spire Gas integration.
+"""Spire Energy integration.
 
 Fetches daily gas usage from the Spire Energy API and writes it
 to HA long-term statistics for display in the Energy dashboard.
@@ -29,7 +29,7 @@ UPDATE_INTERVAL = timedelta(hours=UPDATE_INTERVAL_HOURS)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Spire Gas from a config entry."""
+    """Set up Spire Energy from a config entry."""
 
     # Create API client and verify credentials work — test-before-setup
     session = async_get_clientsession(hass)

@@ -1,4 +1,4 @@
-"""Statistics insertion for Spire Gas integration."""
+"""Statistics insertion for Spire Energy integration."""
 from __future__ import annotations
 
 import logging
@@ -112,7 +112,7 @@ async def async_insert_statistics(hass: HomeAssistant, entry: ConfigEntry) -> No
     metadata = StatisticMetaData(
         has_mean=False,
         has_sum=True,
-        name=f"Spire Gas Usage ({sa_id})",
+        name=f"Spire Energy Usage ({sa_id})",
         source=DOMAIN,
         statistic_id=statistic_id,
         unit_of_measurement="CCF",

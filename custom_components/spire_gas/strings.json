@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Spire Gas",
+        "title": "Spire Energy",
         "description": "Connect to your Spire Energy account to import daily gas usage into the Energy dashboard.",
         "data": {
           "username": "Username / Email",
@@ -12,31 +12,31 @@
         },
         "data_description": {
           "username": "The email address you use to log in to myaccount.spireenergy.com",
-          "password": "Your Spire online account password",
-          "account_id": "Your Spire account number, visible on your account overview page",
+          "password": "Your Spire Energy online account password",
+          "account_id": "Your Spire Energy account number, visible on your account overview page",
           "sa_id": "Your Service Account ID. Not visible in the Spire web UI — find it by opening browser developer tools (F12), going to the Network tab, navigating to your usage history, and looking for a request containing 'daily-usage-history'. The SA ID appears as the 'sald' parameter in the URL."
         }
       },
       "reauth_confirm": {
-        "title": "Re-authenticate Spire Gas",
-        "description": "Your Spire credentials are no longer valid. Please re-enter them.",
+        "title": "Re-authenticate Spire Energy",
+        "description": "Your Spire Energy credentials are no longer valid. Please re-enter them.",
         "data": {
           "username": "Username / Email",
           "password": "Password"
         },
         "data_description": {
           "username": "The email address you use to log in to myaccount.spireenergy.com",
-          "password": "Your Spire online account password"
+          "password": "Your Spire Energy online account password"
         }
       }
     },
     "error": {
       "invalid_auth": "Invalid credentials — please check your username and password",
-      "cannot_connect": "Could not connect to Spire. Check your internet connection and try again.",
+      "cannot_connect": "Could not connect to Spire Energy. Check your internet connection and try again.",
       "unknown": "Unexpected error"
     },
     "abort": {
-      "already_configured": "This Spire account is already configured",
+      "already_configured": "This Spire Energy account is already configured",
       "reauth_successful": "Re-authentication was successful"
     }
   }

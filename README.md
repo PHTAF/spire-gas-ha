@@ -1,6 +1,6 @@
-# Spire Gas — Home Assistant Integration
+# Spire Energy — Home Assistant Integration
 
-![Spire Gas Logo](custom_components/spire_gas/icon.png)
+![Spire Energy Logo](custom_components/spire_gas/icon.png)
 
 A custom Home Assistant integration that fetches daily gas usage from
 [Spire Energy](https://www.spireenergy.com) and displays it in the
@@ -8,16 +8,16 @@ A custom Home Assistant integration that fetches daily gas usage from
 
 ## Features
 
-- Imports full daily usage history available from the Spire API
+- Imports full daily usage history available from the Spire Energy API
 - Displays in the HA Energy dashboard in **CCF**
 - Refreshes automatically every 6 hours to pick up new readings
 - No entities or sensors — just a clean statistic in the Energy dashboard
 
-## Important: Data Availability
+## Data Availability
 
 The amount of historical data available will vary by account. This integration
-imports whatever Spire provides — gaps or missing periods in the data reflect
-what is available from Spire, not a bug in the integration.
+imports whatever Spire Energy provides — gaps or missing periods in the data
+reflect what is available from Spire, not a bug in the integration.
 
 ## Requirements
 
@@ -28,12 +28,14 @@ what is available from Spire, not a bug in the integration.
 
 ### Finding your Account ID and SA ID
 
-Your Account ID is visible on your Spire account overview page after logging in.
+Your Account ID is visible on your Spire Energy account overview page after
+logging in.
 
-Your SA ID is not directly visible in the Spire web interface. The easiest way
-to find it is to log in to [myaccount.spireenergy.com](https://myaccount.spireenergy.com),
-open your browser's developer tools (F12), go to the **Network** tab, navigate
-to your usage history page, and look for a request containing `daily-usage-history`.
+Your SA ID is not directly visible in the Spire Energy web interface. The
+easiest way to find it is to log in to
+[myaccount.spireenergy.com](https://myaccount.spireenergy.com), open your
+browser's developer tools (F12), go to the **Network** tab, navigate to your
+usage history page, and look for a request containing `daily-usage-history`.
 The SA ID will appear as the `sald` parameter in the request URL.
 
 ## Installation via HACS
@@ -43,7 +45,7 @@ The SA ID will appear as the `sald` parameter in the request URL.
 3. Enter `https://github.com/PHTAF/spire-gas-ha` as the repository URL
 4. Select **Integration** as the category
 5. Click **Add**
-6. Search for **Spire Gas** and click **Download**
+6. Search for **Spire Energy** and click **Download**
 7. Restart Home Assistant
 
 ## Manual Installation
@@ -55,14 +57,14 @@ The SA ID will appear as the `sald` parameter in the request URL.
 ## Configuration
 
 1. Go to **Settings → Integrations → Add Integration**
-2. Search for **Spire Gas**
-3. Enter your Spire credentials:
+2. Search for **Spire Energy**
+3. Enter your Spire Energy credentials:
 
 | Field | Description |
 |-------|-------------|
 | **Username / Email** | The email address you use to log in to myaccount.spireenergy.com |
-| **Password** | Your Spire online account password |
-| **Account ID** | Your Spire account number, visible on your account overview page |
+| **Password** | Your Spire Energy online account password |
+| **Account ID** | Your Spire Energy account number, visible on your account overview page |
 | **SA ID** | Your Service Account ID — see above for how to find this |
 
 4. Click **Submit**
@@ -71,30 +73,34 @@ The SA ID will appear as the `sald` parameter in the request URL.
 
 1. Go to **Settings → Energy**
 2. Under **Gas consumption**, click **Add gas source**
-3. Search for **Spire Gas Usage** and select it
+3. Search for **Spire Energy Usage** and select it
 4. Click **Save**
 
-Historical data will populate automatically based on what Spire makes available
-for your account.
+Historical data will populate automatically based on what Spire Energy makes
+available for your account.
 
 ## Removal
 
-1. Go to **Settings → Energy** and remove **Spire Gas Usage** from gas consumption sources
-2. Go to **Settings → Integrations → Spire Gas → (three dots) → Delete**
-3. Go to **Developer Tools → Statistics**, search for `spire_gas` and delete the statistic
+1. Go to **Settings → Energy** and remove **Spire Energy Usage** from gas
+   consumption sources
+2. Go to **Settings → Integrations → Spire Energy → (three dots) → Delete**
+3. Go to **Developer Tools → Statistics**, search for `spire_gas` and delete
+   the statistic
 4. Restart Home Assistant
 
-> **Note:** If you reinstall the integration without deleting the statistic first,
-> the integration will skip the historical import since it will see existing data.
-> Always delete the statistic before reinstalling if you want a clean reimport.
+> **Note:** If you reinstall the integration without deleting the statistic
+> first, the integration will skip the historical import since it will see
+> existing data. Always delete the statistic before reinstalling if you want
+> a clean reimport.
 
 ## Troubleshooting
 
-- **No data appearing** — check **Settings → System → Logs** and filter for `spire_gas`
-- **Authentication error** — your credentials may have changed. The integration will
-  prompt you to re-authenticate via the Integrations page
+- **No data appearing** — check **Settings → System → Logs** and filter for
+  `spire_gas`
+- **Authentication error** — your credentials may have changed. The integration
+  will prompt you to re-authenticate via the Integrations page
 - **Data stops updating** — try reloading the integration from
-  **Settings → Integrations → Spire Gas → (three dots) → Reload**
+  **Settings → Integrations → Spire Energy → (three dots) → Reload**
 
 ## Contributing
 

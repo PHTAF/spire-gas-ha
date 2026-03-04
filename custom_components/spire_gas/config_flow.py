@@ -1,4 +1,4 @@
-"""Config flow for Spire Gas integration."""
+"""Config flow for Spire Energy integration."""
 from __future__ import annotations
 
 import asyncio
@@ -44,7 +44,7 @@ async def _test_credentials(hass, username: str, password: str) -> dict[str, str
 
 
 class SpireGasConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Spire Gas."""
+    """Handle a config flow for Spire Energy."""
 
     VERSION = 1
 
@@ -64,7 +64,7 @@ class SpireGasConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 )
                 self._abort_if_unique_id_configured()
                 return self.async_create_entry(
-                    title=f"Spire Gas ({user_input[CONF_SA_ID]})",
+                    title=f"Spire Energy ({user_input[CONF_SA_ID]})",
                     data={
                         CONF_USERNAME: user_input[CONF_USERNAME],
                         CONF_PASSWORD: user_input[CONF_PASSWORD],
